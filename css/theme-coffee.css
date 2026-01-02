@@ -1,0 +1,57 @@
+/* Coffee theme overrides */
+:root{
+  --coffee-dark: #4b2f2b;
+  --coffee-mid: #6b3a2a;
+  --coffee-light: #c9a66b;
+  --cream: #f6efe6;
+}
+body{ background-color: var(--cream) !important; color: #4b4b4b !important; }
+a{ color: var(--coffee-mid) !important; }
+a:hover{ color: var(--coffee-light) !important; }
+.header, header, #header{ background-color: transparent; }
+.logo_text{ color: var(--coffee-dark) !important; }
+.btn-default, .btn-default:hover, .btn{ background-color: var(--coffee-mid) !important; border-color: var(--coffee-mid) !important; color: #fff !important; }
+.sc_title{ color: var(--coffee-dark) !important; }
+.sc_description{ color: #5a4d47 !important; }
+.sc_team_item_position{ color: #6b534a !important; }
+#testimonials_section .sc_parallax_overlay{ background: linear-gradient(to bottom, rgba(75,47,43,0.95), rgba(107,58,42,0.95)); }
+/* small tweaks */
+.footer, .bottomWrap{ background-color: #f3e9e1 !important; }
+.nav > li > a{ color: #4b2f2b !important; }
+.nav > li > a:hover{ color: var(--coffee-mid) !important; }
+/* Ensure buttons and accents override previous styles */
+.btn-default.btn-lg.slide_button{ background-color: var(--coffee-mid) !important; }
+
+/* Utility for replacing barber icons if any */
+.sc_icon{ background: transparent !important; color: var(--coffee-mid) !important; border-color: var(--coffee-mid) !important; }
+
+/* Replace legacy dental font icons with a barber emoji fallback so glyphs look barber-appropriate */
+/* Map legacy dental classes and the new barber class to a scissors glyph */
+.icon-tooth3:before, .icon-tooth4:before, .icon-tooth8:before, .icon-tooth9:before,
+.icon-tooth10:before, .icon-tooth11:before, .icon-tooth19:before, .icon-tooth20:before,
+.icon-dentist3:before, .icon-dentist4:before, .icon-dentist6:before, .icon-dentist7:before,
+.icon-dentist8:before, .icon-dentist18:before, .icon-barber:before {
+  content: "✂" !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1 !important;
+  display: inline-block !important;
+  color: var(--coffee-dark) !important;
+}
+
+/* Ensure icon containers keep spacing when we override glyphs */
+.sc_icon .sc_icon_icon:before, .sc_icon:before { line-height: 1; }
+
+/* New barber icon class: use scissors emoji for barber theme */
+.sc_accordion_icon.icon-barber, .sc_tabs_icon.icon-barber, .sc_icon.icon-barber { color: var(--coffee-dark) !important; }
+
+/* Gallery overlays */
+.mfp-title{ color: #fff !important; }
+
+/* Homepage service card images */
+.sc_services .service-image{ 
+  width:80px; height:80px; display:block; margin:0 auto 12px; object-fit:cover; border-radius:50%;
+  border:3px solid rgba(75,47,43,0.08);
+}
+
+/* End of theme overrides */
